@@ -234,6 +234,7 @@ The function creates a list with a selectable number of predefined vectors, each
 ```{r random generator}
 generate_dataset <- function(n = 300, m = 1000, func=rbeta, ...) {
   result <- list()
+  # Don't use replicates
   for (i in 1:n) {
     result[[i]] <- func(m, ...)
   }
